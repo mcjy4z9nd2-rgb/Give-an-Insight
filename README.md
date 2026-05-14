@@ -13,7 +13,13 @@
 
 ## 安装依赖
 
-需要先安装 Node.js 18+，然后在项目根目录运行：
+需要先安装 Node.js 20。项目根目录已经放了 `.nvmrc` 和 `.node-version`，如果你使用 nvm，可以先运行：
+
+```bash
+nvm use
+```
+
+然后在项目根目录运行：
 
 ```bash
 npm install
@@ -30,6 +36,21 @@ npm run dev
 ```text
 http://localhost:3000
 ```
+
+如果你想要一个更接近线上部署的本地预览，可以运行：
+
+```bash
+npm run preview
+```
+
+如果预览卡住或页面打不开，先清理 Next.js 缓存后重启：
+
+```bash
+npm run clean
+npm run dev
+```
+
+如果启动时提示 Node 版本不匹配，请切换到 Node.js 20 后再运行。当前项目使用 Next.js 14，Node 24 在这套依赖里会出现页面首次编译卡住，表现为终端显示 `Ready`，但浏览器一直打不开页面。
 
 ## 主要页面
 

@@ -1,12 +1,3 @@
-import {
-  Building2,
-  Home,
-  ShieldCheck,
-  Sparkles,
-  Volume2,
-  WalletCards
-} from "lucide-react";
-
 export type QuestionStatus = "待回答" | "匹配中" | "已回答";
 
 export type Question = {
@@ -209,10 +200,10 @@ export const adminStats = [
 ];
 
 export const trustSignals = [
-  { label: "真实经历", icon: ShieldCheck },
-  { label: "按需付费", icon: WalletCards },
-  { label: "具体对象", icon: Building2 },
-  { label: "可比较回答", icon: Sparkles },
-  { label: "生活场景", icon: Home },
-  { label: "噪音细节", icon: Volume2 }
+  { label: "真实经历", icon: "shield" },
+  { label: "按需付费", icon: "wallet" },
+  { label: "具体对象", icon: "building" },
+  { label: "可比较回答", icon: "sparkles" },
+  { label: "生活场景", icon: "home" },
+  { label: "噪音细节", icon: "volume" }
 ];

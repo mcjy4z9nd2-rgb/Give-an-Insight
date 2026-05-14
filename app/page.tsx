@@ -1,5 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Search, UsersRound } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  CheckCircle2,
+  Home,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  UsersRound,
+  Volume2,
+  WalletCards
+} from "lucide-react";
 import { AnimatedPage } from "@/components/animated-page";
 import { MotionCard } from "@/components/motion-card";
 import { QuestionCard } from "@/components/question-card";
@@ -12,6 +23,15 @@ import {
   questions,
   trustSignals
 } from "@/lib/mock-data";
+
+const trustIcons = {
+  shield: ShieldCheck,
+  wallet: WalletCards,
+  building: Building2,
+  sparkles: Sparkles,
+  home: Home,
+  volume: Volume2
+};
 
 export default function HomePage() {
   return (
@@ -60,7 +80,7 @@ export default function HomePage() {
       <section className="border-b bg-white">
         <div className="container grid gap-3 py-5 sm:grid-cols-2 lg:grid-cols-6">
           {trustSignals.map((item) => {
-            const Icon = item.icon;
+            const Icon = trustIcons[item.icon as keyof typeof trustIcons];
             return (
               <div
                 key={item.label}
